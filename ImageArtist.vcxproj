@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{26D69050-5A3C-4131-9642-8BDFD6876C53}</ProjectGuid>
+    <RootNamespace>Project1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Image_Artist</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>D:\dev\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\examples\libs\glfw\include;D:\dev\vcpkg\buildtrees\glad\x64-windows-static-rel\include;D:\dev\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8;D:\dev\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\examples;D:\dev\imgui_filebrowser\addons\imguifilesystem;D:\dev\vcpkg\installed\x64-windows-static\include;%(AdditionalIncludeDirectories);D:\dev\stb;D:\dev\vcpkg\installed\x64-windows-static\include\ITK-5.0</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\dev\vcpkg\installed\x64-windows-static\lib;D:\dev\vcpkg\packages\imgui_x64-windows-static\lib;D:\dev\vcpkg\packages\boost-filesystem_x64-windows-static\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glad.lib;opengl32.lib;glfw3.lib;imgui.lib;boost_filesystem-vc140-mt.lib;ITKBiasCorrection-5.0.lib;ITKIOMeshBYU-5.0.lib;itkNetlibSlatec-5.0.lib;ITKCommon-5.0.lib;ITKIOMeshFreeSurfer-5.0.lib;ITKniftiio-5.0.lib;ITKDICOMParser-5.0.lib;ITKIOMeshGifti-5.0.lib;ITKNrrdIO-5.0.lib;itkgdcmcharls-5.0.lib;ITKIOMeshOBJ-5.0.lib;itkopenjpeg-5.0.lib;itkgdcmCommon-5.0.lib;ITKIOMeshOFF-5.0.lib;ITKOptimizers-5.0.lib;itkgdcmDICT-5.0.lib;ITKIOMeshVTK-5.0.lib;ITKOptimizersv4-5.0.lib;itkgdcmDSED-5.0.lib;ITKIOMeta-5.0.lib;ITKPath-5.0.lib;itkgdcmIOD-5.0.lib;ITKIOMINC-5.0.lib;ITKPolynomials-5.0.lib;itkgdcmjpeg12-5.0.lib;ITKIOMRC-5.0.lib;ITKQuadEdgeMesh-5.0.lib;itkgdcmjpeg16-5.0.lib;ITKIONIFTI-5.0.lib;ITKSpatialObjects-5.0.lib;itkgdcmjpeg8-5.0.lib;ITKIONRRD-5.0.lib;ITKStatistics-5.0.lib;itkgdcmMEXD-5.0.lib;ITKIOPNG-5.0.lib;itksys-5.0.lib;itkgdcmMSFF-5.0.lib;ITKIOSiemens-5.0.lib;ITKTestKernel-5.0.lib;itkgdcmsocketxx-5.0.lib;ITKIOSpatialObjects-5.0.lib;itktestlib-5.0.lib;ITKgiftiio-5.0.lib;ITKIOStimulate-5.0.lib;ITKTransform-5.0.lib;ITKIOBioRad-5.0.lib;ITKIOTIFF-5.0.lib;ITKTransformFactory-5.0.lib;ITKIOBMP-5.0.lib;ITKIOTransformBase-5.0.lib;itkv3p_netlib-5.0.lib;ITKIOBruker-5.0.lib;ITKIOTransformHDF5-5.0.lib;itkvcl-5.0.lib;ITKIOCSV-5.0.lib;ITKIOTransformInsightLegacy-5.0.lib;ITKVideoCore-5.0.lib;ITKIOGDCM-5.0.lib;ITKIOTransformMatlab-5.0.lib;ITKVideoIO-5.0.lib;ITKIOGE-5.0.lib;ITKIOVTK-5.0.lib;itkvnl-5.0.lib;ITKIOGIPL-5.0.lib;ITKIOXML-5.0.lib;ITKVNLInstantiation-5.0.lib;ITKIOHDF5-5.0.lib;ITKKLMRegionGrowing-5.0.lib;itkvnl_algo-5.0.lib;ITKIOImageBase-5.0.lib;ITKLabelMap-5.0.lib;ITKVTK-5.0.lib;ITKIOIPL-5.0.lib;itklbfgs-5.0.lib;ITKWatersheds-5.0.lib;ITKIOJPEG-5.0.lib;ITKMesh-5.0.lib;ITKznz-5.0.lib;ITKIOJPEG2000-5.0.lib;ITKMetaIO-5.0.lib;ITKIOLSM-5.0.lib;itkminc2-5.0.lib;netcdf.lib;wsock32.lib;comctl32.lib;psapi.lib;advapi32.lib;crypt32.lib;rpcrt4.lib;jpeg.lib;tiff.lib;tiffxx.lib;turbojpeg.lib;lz4.lib;libpng16.lib;libszip.lib;proj.lib;xxhash.lib;libxml2.lib;libiconv.lib;libcharset.lib;theora.lib;theoradec.lib;theoraenc.lib;ogg.lib;libhpdf.lib;freetype.lib;expat.lib;double-conversion.lib;sqlite3.lib;libcurl.lib;jsoncpp.lib;lzma.lib;zlib.lib;bz2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>D:\dev\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\examples\libs\glfw\include;D:\dev\vcpkg\buildtrees\glad\x64-windows-static-rel\include;D:\dev\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8;D:\dev\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\examples;%(AdditionalIncludeDirectories);D:\dev\vcpkg\installed\x64-windows-static\include\boost;D:\dev\vcpkg\installed\x64-windows-static\include;D:\dev\imgui_filebrowser\addons\imguifilesystem;D:\dev\stb;D:\dev\vcpkg\installed\x64-windows-static\include\ITK-5.0</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\dev\vcpkg\installed\x64-windows-static\lib;D:\dev\vcpkg\packages\imgui_x64-windows-static\lib;D:\dev\vcpkg\packages\boost-filesystem_x64-windows-static\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glad.lib;opengl32.lib;glfw3.lib;imgui.lib;boost_filesystem-vc140-mt.lib;ITKBiasCorrection-5.0.lib;ITKIOMeshBYU-5.0.lib;itkNetlibSlatec-5.0.lib;ITKCommon-5.0.lib;ITKIOMeshFreeSurfer-5.0.lib;ITKniftiio-5.0.lib;ITKDICOMParser-5.0.lib;ITKIOMeshGifti-5.0.lib;ITKNrrdIO-5.0.lib;itkgdcmcharls-5.0.lib;ITKIOMeshOBJ-5.0.lib;itkopenjpeg-5.0.lib;itkgdcmCommon-5.0.lib;ITKIOMeshOFF-5.0.lib;ITKOptimizers-5.0.lib;itkgdcmDICT-5.0.lib;ITKIOMeshVTK-5.0.lib;ITKOptimizersv4-5.0.lib;itkgdcmDSED-5.0.lib;ITKIOMeta-5.0.lib;ITKPath-5.0.lib;itkgdcmIOD-5.0.lib;ITKIOMINC-5.0.lib;ITKPolynomials-5.0.lib;itkgdcmjpeg12-5.0.lib;ITKIOMRC-5.0.lib;ITKQuadEdgeMesh-5.0.lib;itkgdcmjpeg16-5.0.lib;ITKIONIFTI-5.0.lib;ITKSpatialObjects-5.0.lib;itkgdcmjpeg8-5.0.lib;ITKIONRRD-5.0.lib;ITKStatistics-5.0.lib;itkgdcmMEXD-5.0.lib;ITKIOPNG-5.0.lib;itksys-5.0.lib;itkgdcmMSFF-5.0.lib;ITKIOSiemens-5.0.lib;ITKTestKernel-5.0.lib;itkgdcmsocketxx-5.0.lib;ITKIOSpatialObjects-5.0.lib;itktestlib-5.0.lib;ITKgiftiio-5.0.lib;ITKIOStimulate-5.0.lib;ITKTransform-5.0.lib;ITKIOBioRad-5.0.lib;ITKIOTIFF-5.0.lib;ITKTransformFactory-5.0.lib;ITKIOBMP-5.0.lib;ITKIOTransformBase-5.0.lib;itkv3p_netlib-5.0.lib;ITKIOBruker-5.0.lib;ITKIOTransformHDF5-5.0.lib;itkvcl-5.0.lib;ITKIOCSV-5.0.lib;ITKIOTransformInsightLegacy-5.0.lib;ITKVideoCore-5.0.lib;ITKIOGDCM-5.0.lib;ITKIOTransformMatlab-5.0.lib;ITKVideoIO-5.0.lib;ITKIOGE-5.0.lib;ITKIOVTK-5.0.lib;itkvnl-5.0.lib;ITKIOGIPL-5.0.lib;ITKIOXML-5.0.lib;ITKVNLInstantiation-5.0.lib;ITKIOHDF5-5.0.lib;ITKKLMRegionGrowing-5.0.lib;itkvnl_algo-5.0.lib;ITKIOImageBase-5.0.lib;ITKLabelMap-5.0.lib;ITKVTK-5.0.lib;ITKIOIPL-5.0.lib;itklbfgs-5.0.lib;ITKWatersheds-5.0.lib;ITKIOJPEG-5.0.lib;ITKMesh-5.0.lib;ITKznz-5.0.lib;ITKIOJPEG2000-5.0.lib;ITKMetaIO-5.0.lib;ITKIOLSM-5.0.lib;itkminc2-5.0.lib;netcdf.lib;wsock32.lib;comctl32.lib;psapi.lib;advapi32.lib;crypt32.lib;rpcrt4.lib;jpeg.lib;tiff.lib;tiffxx.lib;turbojpeg.lib;lz4.lib;libpng16.lib;libszip.lib;proj.lib;xxhash.lib;libxml2.lib;libiconv.lib;libcharset.lib;theora.lib;theoradec.lib;theoraenc.lib;ogg.lib;libhpdf.lib;freetype.lib;expat.lib;double-conversion.lib;sqlite3.lib;libcurl.lib;jsoncpp.lib;lzma.lib;zlib.lib;bz2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\imgui_filebrowser\addons\imguifilesystem\imguifilesystem.cpp" />
+    <ClCompile Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\examples\imgui_impl_glfw.cpp" />
+    <ClCompile Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\examples\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\imgui.cpp" />
+    <ClCompile Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\imgui_demo.cpp" />
+    <ClCompile Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\imgui_draw.cpp" />
+    <ClCompile Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\imgui_widgets.cpp" />
+    <ClCompile Include="file_extension_check.cpp" />
+    <ClCompile Include="itk_watershed_filter.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="texture_maker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\imgui_filebrowser\addons\imguifilesystem\dirent_portable.h" />
+    <ClInclude Include="..\..\imgui_filebrowser\addons\imguifilesystem\imguifilesystem.h" />
+    <ClInclude Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\examples\imgui_impl_glfw.h" />
+    <ClInclude Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\examples\imgui_impl_opengl3.h" />
+    <ClInclude Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\imconfig.h" />
+    <ClInclude Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\imgui.h" />
+    <ClInclude Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\imgui_internal.h" />
+    <ClInclude Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\imstb_rectpack.h" />
+    <ClInclude Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\imstb_textedit.h" />
+    <ClInclude Include="..\..\vcpkg\buildtrees\imgui\src\v1.73-a85d24b4b8\imstb_truetype.h" />
+    <ClInclude Include="file_extension_check.h" />
+    <ClInclude Include="itk_watershed_filter.h" />
+    <ClInclude Include="texture_maker.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

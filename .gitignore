@@ -1,0 +1,10 @@
+*.suo
+*.db
+*.opendb
+*.log
+*.tlog
+*.obj
+*.pdb
+*.ipdb
+*.iobj
+*.ini
