@@ -53,6 +53,8 @@ int main() {
     double high_val = 0.09;
     double low_val = 0.01;
 
+    // TODO : probably better to have the user reassign
+    auto reset_param = [](double& high, double& low) { if (high <= low) { high = 0.0001 + low; } };
     while (!glfwWindowShouldClose(window))
     {
         glfwPollEvents();
@@ -66,7 +68,6 @@ int main() {
         static ImGuiFs::Dialog dlg;                                                    
         const char* chosenPath = dlg.chooseFileDialog(pressed);             
 
-
         if (strlen(dlg.getChosenPath()) > 0) {
            ImGui::Text("Chosen file: \"%s\"", dlg.getChosenPath());
            std::string path(dlg.getChosenPath());
@@ -79,13 +80,14 @@ int main() {
            ImGui::InputDouble("low value", &low_val);
 
            if (ext == ".png" || ext == ".jpeg") {
-               ia::load_texture(path.c_str(), &image_texture, &image_width, &image_height);
+               ia::load_texture(path.c_str(), image_texture, image_width, image_height);
                ImGui::Image((void*)(intptr_t)image_texture, ImVec2(image_width, image_height));
                ImGui::SameLine();
                if (ImGui::Button("Process"))
                {
+                   reset_param(high_val, low_val);
                   new_file = ia::watershed_filter(dlg.getChosenPath(), high_val, low_val);
-                  ia::load_texture(new_file, &(processed_image), &image_width, &image_height);
+                  ia::load_texture(new_file, processed_image, image_width, image_height);
                   processed = true;
                }
                if (processed) {
