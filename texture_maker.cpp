@@ -1,11 +1,13 @@
+//This is adapted from an example from the Dear ImGui board
+
 #include <glad/glad.h>
-#include <glfw\glfw3.h>
+#include <glfw/glfw3.h>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
 namespace ia {
-    bool load_texture(const char* filename, GLuint* out_texture, int* out_width, int* out_height)
+    bool load_texture(const char* filename, GLuint& out_texture, int& out_width, int& out_height)
     {
         // Load from file
         int image_width = 0;
@@ -28,9 +30,9 @@ namespace ia {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image_width, image_height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image_data);
         stbi_image_free(image_data);
 
-        *out_texture = image_texture;
-        *out_width = image_width;
-        *out_height = image_height;
+        out_texture = image_texture;
+        out_width = image_width;
+        out_height = image_height;
 
         return true;
     }
